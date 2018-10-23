@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
 <title>D &#9829; R </title>
 <link rel="stylesheet" href="./css/bootstrap.min.css">
 <link rel="stylesheet" href="./css/style.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+crossorigin="anonymous">
 <link rel="shortcut icon" href="icon.png" type="image/png">
+
 </head>
 
 <body>
@@ -16,43 +19,53 @@
 <div class="row">
         <div class="col-sm"></div>
         <div class="col-sl">
-                <header class="shadow p-3 mb-4 bg-white rounded">Dharani  Weds Ram Prasad</header>
-              
-                <div id="countdown">
-                        
-                        <div class="countdown-item days">0</div>
-                        <div class="countdown-item hours">0</div>
-                        <div class="countdown-item minutes">0</div>
-                        <div class="countdown-item seconds">0</div>
-                </div>
-                   
-                <div class="card bg-dark text-white mb-4">
-                        <img class="card-img-top" src="./images/timer.jpeg" alt="Card image">
+                <header class="shadow p-3 mb-4 bg-white rounded">Dharani Weds Ram Prasad</header>
+                <div data-aos="flip-left" class="texts text-center bg-white card-footer rounded-top">
+                                Time left for the Big event </div>   
+                <div class="card mb-4 rounded-bottom">                              
+                        <img class="card-img-top rounded-bottom" src="./images/timer.jpeg" alt="Card image">
                         <div class="card-img-overlay">
-                            
+                                        <div id="clockdiv">
+                                                        <div>
+                                                                <span class="days"></span>
+                                                                <span class="dhms">Days</span> 
+                                                        </div>
+                                                        <div>
+                                                                <span class="hours"></span>
+                                                                <span class="dhms">Hrs</span> 
+                                                        </div>
+                                                        <div>
+                                                                <span class="minutes"></span>
+                                                                <span class="dhms">Mins</span>
+                                                        </div>
+                                                        <div>
+                                                                <span class="seconds"></span>
+                                                                <span class="dhms">Sec</span>
+                                                        </div>
+                                        </div>
                         </div>
                 </div>
-                
-                            <div class="card mb-4 ">              
-                            <a target="_blank" href="https://maps.google.com/?cid=14514721557523221077">
+
+                <div class="card mb-4 ">
+                        <a target="_blank" href="https://maps.google.com/?cid=14514721557523221077">
 
 
-                            <img class="card-img-top" src="./images/map.JPG" alt="Card image cap">
-                                <div class="card-body">                                              
-                                    <h4 class="card-title"><i class="fa fa-map-marker-alt" style="color:red"></i> Location</h4>
-                                    <p class="card-text" style="text-decoration:none">From Kovilpatti bus stand -> Kamarajar Mahal</p>
+                                <img class="card-img-top" src="./images/map.JPG" alt="Card image cap">
+                                <div class="card-body">
+                                        <h4 class="card-title"><i class="fa fa-map-marker-alt" style="color:red"></i>
+                                                Location</h4>
+                                        <p class="card-text" style="text-decoration:none">From
+                                                Kovilpatti bus stand -> Kamarajar Mahal</p>
                                 </div>
-                            </a>
-                            </div>
+                        </a>
+                </div>
         </div>
         <div class="col-sm"></div>
-</div> 
+</div>
 </div>
 <script src="./js/jquery.js"></script>
-<script src="./js/index.js"></script>
 <script src="./js/script.js"></script>
 <script src="./js/popper.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-
 </body>
 </html>
