@@ -1,19 +1,100 @@
-header {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+/*font family initialization*/
+
+@font-face {
+    font-family: 'Muli-Black';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/Muli-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Muli-Bold';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/Muli-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Bold';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/SourceSansPro-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'SourceSansPro-It';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/SourceSansPro-It.ttf');
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Regular';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/SourceSansPro-Regular.ttf');
+}
+
+body {
+    font-family: SourceSansPro-Regular;
+    font-size: 14px;
+    line-height: 1.21;
+}
+
+.container {
+    max-width: 600px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.main-head {
+    font-family: Muli-Bold;
     text-align: center;
-    font-style: italic;
-    text-shadow: 2px;
-    border-radius: 5px;
-    background: grey;
-    /* background: repeating-linear-gradient(45deg, #444242 0%, #adadaa 10%, #8937cc 0%, #c71b1b 50%) 0 / 15px 15px; */
+    background: white;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    border-radius: 0 !important;
+    top: 0;
+    background: #000000 url(../images/background-2045380_640.jpg) 100% 100% no-repeat;
+    font-size: 20px;
+    max-width: 570px;
+    margin: 0 auto;
+}
+
+#vessel {
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    z-index: 20;
+}
+
+.main-head:before, .main-head::after {
+    content: '\2665';
+    color: red;
+    font-size: 26px;
+    margin: 0 3px;
+}
+
+.card-img-overlay {
+    position: static;
+    background: black;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 7s ease infinite;
+    -moz-animation: Gradient 7s ease infinite;
+    animation: Gradient 7s ease infinite;
+}
+
+.texts.text-center.bg-white.card-footer.rounded-top {
+    margin-top: 50px;
 }
 
 .texts {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: SourceSansPro-Regular;
     text-align: center;
-    font-style: italic;
-    text-shadow: 2px;
-    background: grey;
+    font-size: 16px;
 }
 
 #clockdiv {
@@ -23,13 +104,100 @@ header {
 }
 
 #clockdiv>div {
-    font-size: 50px;
+    font-size: 35px;
     display: inline-block;
-    -webkit-animation: neon3 1s ease-in-out infinite alternate;
-    -moz-animation: neon3 1s ease-in-out infinite alternate;
-    animation: neon3 1s ease-in-out infinite alternate;
+    -webkit-animation: neon4 1s ease-in-out infinite alternate;
+    -moz-animation: neon4 1s ease-in-out infinite alternate;
+    animation: neon4 1s ease-in-out infinite alternate;
 }
 
+h1, h6 {
+    font-family: 'Open Sans';
+    font-weight: 300;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    right: 0;
+    left: 0;
+}
+
+@media (min-width: 576px) {
+    #clockdiv>div {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    #clockdiv>div {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 992px) {
+    #clockdiv>div {
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) {}
+
+@media (max-width: 600px) {
+    #clockdiv>div {
+        font-size: 20px;
+    }
+}
+
+body {
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 7s ease infinite;
+    -moz-animation: Gradient 7s ease infinite;
+    animation: Gradient 7s ease infinite;
+}
+
+canvas.sketch {
+    min-height: 632px !important;
+    height: 100% !important;
+    width: 100% !important;
+    position: absolute;
+    top: 0;
+}
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
 
 /*glow for webkit*/
 
@@ -197,102 +365,4 @@ header {
     to {
         text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
     }
-}
-
-@media (min-width: 576px) {
-    #clockdiv>div {
-        padding: 10px;
-    }
-    body {
-        background: url('../images/mobile.jpg');
-    }
-}
-
-@media (min-width: 768px) {
-    #clockdiv>div {
-        padding: 10px;
-    }
-    body {
-        background: url('../images/bg desktop.jpg');
-    }
-}
-
-@media (min-width: 992px) {
-    #clockdiv>div {
-        padding: 10px;
-    }
-    body {
-        background: url('../images/bg desktop.jpg');
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    body {
-        background: url('../images/bg desktop.jpg');
-    }
-}
-
-@media (max-width: 600px) {
-    #clockdiv>div {
-        font-size: 20px;
-    }
-    body {
-        background: url('../images/mobile.jpg');
-    }
-}
-
-
-body {
-	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-	background-size: 400% 400%;
-	-webkit-animation: Gradient 7s ease infinite;
-	-moz-animation: Gradient 7s ease infinite;
-	animation: Gradient 7s ease infinite;
-}
-
-@-webkit-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@-moz-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-h1,
-h6 {
-	font-family: 'Open Sans';
-	font-weight: 300;
-	text-align: center;
-	position: absolute;
-	top: 45%;
-	right: 0;
-	left: 0;
 }
