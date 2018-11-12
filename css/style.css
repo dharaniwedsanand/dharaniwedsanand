@@ -106,9 +106,9 @@ body {
 #clockdiv>div {
     font-size: 35px;
     display: inline-block;
-    -webkit-animation: neon4 1s ease-in-out infinite alternate;
+    /* -webkit-animation: neon4 1s ease-in-out infinite alternate;
     -moz-animation: neon4 1s ease-in-out infinite alternate;
-    animation: neon4 1s ease-in-out infinite alternate;
+    animation: neon4 1s ease-in-out infinite alternate; */
 }
 
 h1, h6 {
